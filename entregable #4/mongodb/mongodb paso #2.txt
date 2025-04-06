@@ -1,0 +1,16 @@
+db.estudiantes.insertMany([
+  { nombre: "Ana", edad: 19, ciudad: "Bogotá" },
+  { nombre: "Luis", edad: 22, ciudad: "Medellín" },
+  { nombre: "Carlos", edad: 20, ciudad: "Barranquilla" },
+  { nombre: "Sofía", edad: 23, ciudad: "Bogotá" },
+  { nombre: "María", edad: 18, ciudad: "Cali" }
+]);
+
+// Consulta todo lo registros
+db.estudiantes.find();
+
+// Filtrar Estudiantes por ciudad
+db.estudiantes.find({ ciudad: "Bogotá" });
+
+// Consultar los estudiantes mayores a 20 años 
+db.estudiantes.find({ edad: { $gt: 20 } });
